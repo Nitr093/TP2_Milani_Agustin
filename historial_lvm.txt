@@ -1,0 +1,103 @@
+    1  sudo fdisk -l
+    2  sudo fdisk /dev/sdc
+    3  ioctl
+    4  sudo fdisk -l
+    5  free -h
+    6  sudo wipefs /dev/sdc1
+    7  sudo wipefs /dev/sdc2
+    8  sudo fdisk -l
+    9  sudo wipefs /dev/sdb2
+   10  sudo wipefs /dev/sdb3
+   11  sudo wipefs /dev/sdb5
+   12  sudo wipefs /dev/sdb6
+   13  sudo fdisk -l
+   14  sudo pvcreate /dev/sdb2 /dev/sdb3 /dev/sdb5 /dev/sdb6 /dev/sdc1 /dev/sdc2
+   15  sudo pvs
+   16  sudo vgcreate vg_datos /dev/sdc1 /dev/sdb2
+   17  sudo pvs
+   18  sudo vgs
+   19  sudo pvs
+   20  sudo vgcreate vg_web /dev/sdc2
+   21  sudo pvs
+   22  sudo vgs
+   23  sudo lvcreate -L 1G vg_web -n vg_web1
+   24  sudo lvcreate -L 512M vg_web -n vg_web2
+   25  sudo lvcreate -L 512M vg_web -n vg_web3
+   26  sudo lvs
+   27  sudo vgs
+   28  sudo pvs
+   29  sudo lvs
+   30  sudo vgs
+   31  sudo fdisk -l
+   32  sudo mkfs.ext4 /dev/mapper/vg_web-vg_web1
+   33  sudo mkfs.ext4 /dev/mapper/vg_web-vg_web2
+   34  sudo mkfs.ext4 /dev/mapper/vg_web-vg_web3
+   35  sudo fdisk -l
+   36  ls -l
+   37  pwd
+   38  whoami
+   39  ls -al
+   40  ls -la
+   41  cd Documents/
+   42  mkdir repoGit
+   43  cd repoGit/
+   44  ssh-keygen -t ed25519 -C "infernal.agustin@gmail.com"
+   45  cd Documents/
+   46  cd repoGit/
+   47  cd ..
+   48  ls -l
+   49  ls -al
+   50  ssh-keygen -t ed25519 -C "infernal.agustin@gmail.com"
+   51  ls -l .ssh
+   52  ls -l .ssh/
+   53  ls -al
+   54  ls -al .ssh
+   55  sudo systemctl status sshd
+   56  sudo systemctl status ssh
+   57  cat .ssh/id_ed25519.pub
+   58  git init
+   59  sudo dnf install bash
+   60  sudo dnf install git
+   61  git --version
+   62  git init
+   63  git --version
+   64  git config --global user.name "Agustin Fedora"
+   65  git config --global user.email "infernal.agustin@gmail.com"
+   66  git config --global init.defaultBranch main
+   67  ls -al
+   68  git init
+   69  cd .git
+   70  ls/ al
+   71  ls -al
+   72  cat info
+   73  cat config
+   74  cat HEAD
+   75  cat description 
+   76  cd info
+   77  ls -al
+   78  cat exclude 
+   79  cd ..
+   80  cd Documents/
+   81  cd repoGit/
+   82  ls -al
+   83  echo "# TP2_Milani_Agustin" >> README.md
+   84  git init
+   85  git add README.md 
+   86  git commit -m "first" commit
+   87  git status
+   88  git add README.ms
+   89  git add README.md
+   90  git commit -m "first" commit
+   91  git commit -m "first" commit"
+   92  git commit -m "first commit"
+   93  git status
+   94  git branch -M main
+   95  git remote add origin git@github.com:Nitr093/TP2_Milani_Agustin.git
+   96  git push -u origin main
+   97  sudo pvs > pvs.txt
+   98  cat pvs.txt 
+   99  sudo vgs > vgs.txt
+  100  cat vgs.txt 
+  101  sudo lvs > lvs.txt
+  102  cat lvs.txt 
+  103  history > historial_lvm.txt
